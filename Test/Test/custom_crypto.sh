@@ -6,7 +6,7 @@
 PROJECT_CONFIG="${CONFIGURATION}"
 # echo "PROJECT_CONFIG: $PROJECT_CONFIG"
 
-CUSTOM_CRYPTO_REPO_TAG="master"
+CUSTOM_CRYPTO_REPO_TAG="New1"
 # echo "CUSTOM_CRYPTO_REPO_TAG: $CUSTOM_CRYPTO_REPO_TAG"
 
 PROJECT_CONFIG="Debug"
@@ -31,8 +31,8 @@ if [[ $PROJECT_CONFIG =~ "Debug" || $PROJECT_CONFIG =~ "Release" ]]; then
         echo -e "do a git reset --hard; git pull;"
         cd $CUSTOM_CRYPTO_PATH
         git reset --hard
-        git pull; assertSuccess
-        git checkout $CUSTOM_CRYPTO_REPO_TAG; assertSuccess
+        git pull
+        git checkout $CUSTOM_CRYPTO_REPO_TAG
         echo -e "force exit with success."
         exit 0
     fi
